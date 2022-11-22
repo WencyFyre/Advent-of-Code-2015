@@ -12,6 +12,15 @@ namespace Advent_of_Code_2015
         {
             return int.Parse(str);
         }
+        public static uint ParseToUInt(this string str)
+        {
+            return uint.Parse(str);
+        }
+        public static long ParseToLong(this string str)
+        {
+            return long.Parse(str);
+        }
+        
         public static bool IsEven(this uint num)
         {
             return num % 2 == 0;

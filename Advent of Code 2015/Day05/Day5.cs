@@ -60,22 +60,22 @@ namespace Advent_of_Code_2015
             }
             return true;
         }
-        public static bool IsNiceString2(String line)
+public static bool IsNiceString2(String line)
+{
+    bool hasCharBetween = false;
+    for (int i = 2; i < line.Length; i++)
+    {
+        if (line[i - 2] == line[i]) hasCharBetween = true;
+    }
+    if (!hasCharBetween) return false;
+    for (int i = 1; i < line.Length; i++)
+    {
+        for (int j = i; j < line.Length-2; j++)
         {
-            bool hasCharBetween = false;
-            for (int i = 2; i < line.Length; i++)
-            {
-                if (line[i - 2] == line[i]) hasCharBetween = true;
-            }
-            if (!hasCharBetween) return false;
-            for (int i = 1; i < line.Length; i++)
-            {
-                for (int j = i; j < line.Length-2; j++)
-                {
-                    if (line[i - 1] == line[j + 1] && line[i] == line[j + 2]) return true; //drew it on paper, it works, really
-                }
-            }
-            return false;
+            if (line[i - 1] == line[j + 1] && line[i] == line[j + 2]) return true; //drew it on paper, it works, really
+        }
+    }
+    return false;
         }
     }
 }

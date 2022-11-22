@@ -64,14 +64,14 @@ namespace Advent_of_Code_2015
         }
 
 
-        public static void RotateRight(IList<string> sequence, int count)
+        public static void RotateRight<T>(IList<T> sequence, int count)
         {
-            string tmp = sequence[count - 1];
+            T tmp = sequence[count - 1];
             sequence.RemoveAt(count - 1);
             sequence.Insert(0, tmp);
         }
 
-        public static IEnumerable<IList<string>> Permutate(IList<string> sequence, int count)
+        public static IEnumerable<IList<T>> Permutate<T>(IList<T> sequence, int count)
         {
             if (count == 1) yield return sequence;
             else

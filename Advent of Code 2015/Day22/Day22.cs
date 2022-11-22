@@ -9,7 +9,7 @@ namespace Advent_of_Code_2015
 {
     public class Day22 : IDaySolution
     {
-        readonly string path = Path.Combine("C:\\Users\\wency\\source\\repos\\Advent of Code 2015\\Advent of Code 2015\\Day22\\input.txt");
+        readonly string path = Path.Combine("C:\\Users\\wency\\Source\\Repos\\Advent-of-Code-2015\\Advent of Code 2015\\Day22\\input.txt");
         public void PartOne()
         {
             var input = File.ReadAllText(path);
